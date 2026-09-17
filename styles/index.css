@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Epistle';
+  src: url('./fonts/Epistle-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg: #FAFAF7;
+  --heading:    #0F172A;
+  --text:       #475569;
+  --accent:     #1D4ED8;
+  --block-bg:   #DBEAFE;
+  --risk:       #B91C1C;
+  --recommend:  #047857;
+  --border:     #E2E8F0;
+}
+
+.slidev-layout {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Ubuntu', system-ui, sans-serif;
+}
+
+.slidev-layout h1{
+  font-family: 'Epistle', serif;
+  color: var(--heading);
+  border: none !important;
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.slidev-layout h2 {
+  font-family: 'Epistle', serif;
+  color: var(--heading);
+  border: none !important;
+}
+
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout h5 {
+  font-family: 'Ubuntu', system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--heading);
+  border: none !important;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  font-weight: 400;
+  color: var(--text);
+}
+
+.slidev-layout a {
+  color: var(--accent);
+}
+
+.block     { background: var(--block-bg); }
+.risk      { color: var(--risk); }
+.recommend { color: var(--recommend); }
+
+.slidev-layout hr,
+.slidev-layout table,
+.slidev-layout th,
+.slidev-layout td {
+  border-color: var(--border);
+}
+
+.slidev-vclick-target {
+  transition: opacity 0.6s ease, transform 0.6s ease !important;
+}

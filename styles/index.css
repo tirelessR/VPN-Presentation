@@ -2626,3 +2626,475 @@
 
   font-size: 14px;
 }
+
+/* =========================================================
+   ДОПОЛНИТЕЛЬНЫЕ СЛАЙДЫ: СОГЛАСОВАННЫЕ ЗАГОЛОВКИ
+   ========================================================= */
+
+.compare-slide > h1,
+.legal-slide > h1,
+.checklist-slide > h1,
+.future-slide > h1 {
+  flex: none;
+  margin: 0;
+  color: var(--text);
+  font-size: 50px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.compare-card,
+.legal-card,
+.checklist-item {
+  box-shadow: var(--shadow-card);
+}
+
+
+/* =========================================================
+   SLIDE — VPN VS ПРОКСИ VS TOR
+   ========================================================= */
+
+.compare-slide {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    var(--slide-top)
+    var(--slide-x)
+    var(--slide-bottom);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-grid {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-top: var(--heading-gap);
+  margin-bottom: 24px;
+}
+
+.compare-card {
+  min-width: 0;
+
+  padding: 21px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: var(--radius-card);
+
+  background: var(--surface);
+}
+
+.compare-card-accent {
+  background: var(--surface-accent);
+}
+
+.compare-card h3 {
+  flex: none;
+
+  margin: 0 0 10px;
+
+  color: var(--text);
+
+  font-size: 23px;
+  line-height: 1.12;
+}
+
+.compare-card > p {
+  flex: none;
+
+  min-height: 68px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+
+/*
+ * margin-top: auto прижимает шкалы к низу карточки
+ * независимо от длины текста выше — за счёт этого
+ * шкалы у всех трёх карточек стоят на одной линии.
+ */
+
+.compare-meters {
+  flex: none;
+
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.compare-meter {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.compare-meter span {
+  color: var(--text);
+
+  font-size: 12px;
+
+  letter-spacing: 0.03em;
+}
+
+.meter-track {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+
+  background: var(--bg);
+}
+
+.meter-fill {
+  height: 100%;
+
+  border-radius: 3px;
+
+  background: var(--accent);
+}
+
+.compare-note {
+  flex: none;
+
+  max-width: 930px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SLIDE — ЮРИДИЧЕСКИЕ АСПЕКТЫ
+   ========================================================= */
+
+.legal-slide {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    var(--slide-top)
+    var(--slide-x)
+    var(--slide-bottom);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-grid {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-top: var(--heading-gap);
+  margin-bottom: 24px;
+}
+
+.legal-card {
+  min-width: 0;
+
+  padding: 21px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: var(--radius-card);
+
+  background: var(--surface);
+}
+
+.legal-card-warn {
+  background: var(--surface-accent);
+}
+
+.legal-card-danger {
+  background: var(--surface-warm);
+}
+
+.legal-badge {
+  flex: none;
+
+  align-self: flex-start;
+
+  padding: 5px 12px;
+
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  letter-spacing: 0.05em;
+}
+
+.legal-badge-ok {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.legal-badge-warn {
+  background: var(--bg);
+  color: var(--accent);
+}
+
+.legal-badge-danger {
+  background: var(--warning);
+  color: #ffffff;
+}
+
+.legal-card h3 {
+  flex: none;
+
+  margin: 0 0 10px;
+
+  color: var(--text);
+
+  font-size: 23px;
+  line-height: 1.12;
+}
+
+.legal-card p {
+  flex: none;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.legal-note {
+  flex: none;
+
+  max-width: 930px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SLIDE — ЧЕК-ЛИСТ РЕКОМЕНДАЦИЙ
+   ========================================================= */
+
+.checklist-slide {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    var(--slide-top)
+    var(--slide-x)
+    var(--slide-bottom);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.checklist {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+
+  gap: 10px;
+
+  margin-top: var(--heading-gap);
+}
+
+.checklist-item {
+  min-height: 0;
+
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 24px 1fr;
+
+  gap: 18px;
+
+  align-items: center;
+
+  border-radius: var(--radius-card);
+
+  background: var(--surface);
+}
+
+.checklist-item-accent {
+  background: var(--surface-accent);
+}
+
+.checklist-check {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  flex: none;
+
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+}
+
+.checklist-check::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  top: 5px;
+
+  width: 9px;
+  height: 5px;
+
+  border-left: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+
+  transform: rotate(-45deg);
+}
+
+.checklist-item p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SLIDE — ПЕРСПЕКТИВЫ РАЗВИТИЯ (ТАЙМЛАЙН)
+   ========================================================= */
+
+.future-slide {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    var(--slide-top)
+    var(--slide-x)
+    var(--slide-bottom);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.future-timeline {
+  position: relative;
+
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 0;
+
+  margin-top: var(--heading-gap);
+  padding-top: 8px;
+}
+
+
+/*
+ * Линия строится не пикселями, а в процентах
+ * от ширины контейнера: при 4 равных колонках
+ * без gap центр первой и последней точки всегда
+ * находится на 1/8 и 7/8 ширины — поэтому линия
+ * при любом размере слайда идёт точно через центры.
+ */
+
+.future-line {
+  position: absolute;
+
+  left: 12.5%;
+  right: 12.5%;
+  top: 15px;
+
+  height: 2px;
+
+  background: var(--surface-accent);
+
+  z-index: 0;
+}
+
+.future-item {
+  position: relative;
+
+  z-index: 1;
+
+  padding: 0 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.future-dot {
+  flex: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow: 0 0 0 6px var(--bg);
+}
+
+.future-item h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.future-item p {
+  max-width: 190px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 15px;
+  line-height: 1.42;
+}

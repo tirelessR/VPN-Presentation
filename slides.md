@@ -143,7 +143,7 @@ fonts:
   </div>
   <div class="connection-notes">
     <p><strong>IP-адрес</strong> позволяет определить, откуда пришёл запрос и куда необходимо отправить ответ.</p>
-    <p><strong>HTTPS</strong> шифрует содержимое соединения между браузером и сайтом, но не является VPN.</p>
+    <p><strong>HTTPS</strong> шифрует содержимое соединения между браузером и сайтом, но не весь трафик устройства.</p>
   </div>
 </div>
 
@@ -310,9 +310,64 @@ fonts:
 
 ---
 
-<div class="uses-slide">
+<div class="compare-slide">
   <div class="slide-heading">
     <span>07</span>
+    <span>СРАВНЕНИЕ</span>
+  </div>
+  <h1>VPN, прокси и Tor</h1>
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h3>Прокси</h3>
+      <p>Подменяет IP-адрес для отдельного приложения, но обычно не шифрует трафик целиком.</p>
+      <div class="compare-meters">
+        <div class="compare-meter">
+          <span>Скорость</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 88%"></div></div>
+        </div>
+        <div class="compare-meter">
+          <span>Анонимность</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 28%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="compare-card compare-card-accent">
+      <h3>VPN</h3>
+      <p>Шифрует весь трафик устройства и подменяет IP через один защищённый сервер.</p>
+      <div class="compare-meters">
+        <div class="compare-meter">
+          <span>Скорость</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 68%"></div></div>
+        </div>
+        <div class="compare-meter">
+          <span>Анонимность</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 62%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="compare-card">
+      <h3>Tor</h3>
+      <p>Передаёт трафик через цепочку независимых узлов с многослойным шифрованием.</p>
+      <div class="compare-meters">
+        <div class="compare-meter">
+          <span>Скорость</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 25%"></div></div>
+        </div>
+        <div class="compare-meter">
+          <span>Анонимность</span>
+          <div class="meter-track"><div class="meter-fill" style="width: 92%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="compare-note">VPN — баланс между скоростью и защитой, но требует доверия к конкретному провайдеру.</p>
+</div>
+
+---
+
+<div class="uses-slide">
+  <div class="slide-heading">
+    <span>08</span>
     <span>ПРИМЕНЕНИЕ</span>
   </div>
   <h1>Для чего используется VPN</h1>
@@ -361,7 +416,7 @@ fonts:
 
 <div class="advantages-slide">
   <div class="slide-heading">
-    <span>08</span>
+    <span>09</span>
     <span>ПРЕИМУЩЕСТВА</span>
   </div>
   <h1>Что даёт использование VPN?</h1>
@@ -410,7 +465,7 @@ fonts:
 ---
 <div class="limits-visual-slide">
   <div class="slide-heading">
-    <span>09</span>
+    <span>10</span>
     <span>ОГРАНИЧЕНИЯ</span>
   </div>
   <h1>Что VPN не может?</h1>
@@ -470,9 +525,38 @@ fonts:
 </div>
 
 ---
+
+<div class="legal-slide">
+  <div class="slide-heading">
+    <span>11</span>
+    <span>ПРАВО</span>
+  </div>
+  <h1>Юридические аспекты</h1>
+  <div class="legal-grid">
+    <div class="legal-card">
+      <div class="legal-badge legal-badge-ok">Легально</div>
+      <h3>Большинство стран</h3>
+      <p>VPN рассматривается как обычный инструмент защиты данных и никак не ограничивается.</p>
+    </div>
+    <div class="legal-card legal-card-warn">
+      <div class="legal-badge legal-badge-warn">С ограничениями</div>
+      <h3>Отдельные юрисдикции</h3>
+      <p>Требуется регистрация сервиса либо действуют ограничения на определённые протоколы.</p>
+    </div>
+    <div class="legal-card legal-card-danger">
+      <div class="legal-badge legal-badge-danger">Под запретом</div>
+      <h3>Некоторые страны</h3>
+      <p>Использование отдельных категорий VPN-сервисов прямо запрещено законом.</p>
+    </div>
+  </div>
+  <p class="legal-note">VPN не отменяет ответственность за действия в интернете — он скрывает технические детали соединения, а не меняет правовой статус самих действий.</p>
+</div>
+
+---
+
 <div class="security-slide">
   <div class="slide-heading">
-    <span>10</span>
+    <span>12</span>
     <span>БЕЗОПАСНОСТЬ</span>
   </div>
   <h1>Как выбрать безопасный VPN?</h1>
@@ -500,12 +584,76 @@ fonts:
   </div>
 </div>
 
+---
+
+<div class="checklist-slide">
+  <div class="slide-heading">
+    <span>13</span>
+    <span>РЕКОМЕНДАЦИИ</span>
+  </div>
+  <h1>Как пользоваться VPN безопасно</h1>
+  <div class="checklist">
+    <div v-click class="checklist-item">
+      <div class="checklist-check"></div>
+      <p>Включайте VPN при подключении к любым публичным и незнакомым сетям Wi-Fi.</p>
+    </div>
+    <div v-click class="checklist-item">
+      <div class="checklist-check"></div>
+      <p>Не полагайтесь только на VPN — используйте антивирус и двухфакторную аутентификацию.</p>
+    </div>
+    <div v-click class="checklist-item">
+      <div class="checklist-check"></div>
+      <p>Проверяйте политику «no-logs» — не ведёт ли сервис журнал вашей активности.</p>
+    </div>
+    <div v-click class="checklist-item">
+      <div class="checklist-check"></div>
+      <p>Выбирайте сервер ближе к реальному местоположению, если важна скорость соединения.</p>
+    </div>
+    <div v-click class="checklist-item checklist-item-accent">
+      <div class="checklist-check"></div>
+      <p>Своевременно обновляйте VPN-приложение и операционную систему устройства.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="future-slide">
+  <div class="slide-heading">
+    <span>14</span>
+    <span>ПЕРСПЕКТИВЫ</span>
+  </div>
+  <h1>Куда движется VPN</h1>
+  <div class="future-timeline">
+    <div class="future-line"></div>
+    <div v-click class="future-item">
+      <div class="future-dot"></div>
+      <h3>WireGuard</h3>
+      <p>Рост популярности благодаря простоте кода и высокой скорости.</p>
+    </div>
+    <div v-click class="future-item">
+      <div class="future-dot"></div>
+      <h3>Встроенный VPN</h3>
+      <p>Поддержка появляется прямо в операционных системах и браузерах.</p>
+    </div>
+    <div v-click class="future-item">
+      <div class="future-dot"></div>
+      <h3>Децентрализация</h3>
+      <p>Распределённые VPN-сети снижают зависимость от одного провайдера.</p>
+    </div>
+    <div v-click class="future-item">
+      <div class="future-dot"></div>
+      <h3>Обфускация</h3>
+      <p>Маскировка факта использования VPN в странах с жёсткими ограничениями.</p>
+    </div>
+  </div>
+</div>
 
 ---
 
 <div class="conclusion-slide">
   <div class="slide-heading">
-    <span>11</span>
+    <span>15</span>
     <span>ЗАКЛЮЧЕНИЕ</span>
   </div>
   <h1>Главное о VPN</h1>
